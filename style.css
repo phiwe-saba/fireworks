@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: red; /* Changed background color to red */
+    overflow: hidden; /* Hide overflow for the sparkling effect */
+  }
+  
+@keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+}
+
+h1{
+    color: white;
+    font-size: 85px;
+    text-align: center;
+}
+  
+.firework {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    animation: explode 1s ease-out;
+}
+  
+/* Define colors for fireworks */
+.firework-1 { background-color: #ff5733; }
+.firework-2 { background-color: #33ff57; }
+.firework-3 { background-color: #337cff; }
+.firework-4 { background-color: #ff33ec; }
+.firework-5 { background-color: #ffea33; }
+
+.sparkle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: #FFF;
+    animation: sparkle 0.5s linear infinite alternate;
+}
+  
+@keyframes sparkle {
+    100% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
